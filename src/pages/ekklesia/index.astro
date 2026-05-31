@@ -1,0 +1,168 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="What Is Ekklesia? The Church Jesus Built"
+  description="Ekklesia is not a Sunday service. It's the called-out community of the King, commissioned to carry the mission of the Kingdom into every sphere of society."
+  category="Ekklesia"
+>
+
+<style>
+  .page-hero { background: var(--pc-navy); padding: 56px 24px 48px; }
+  .page-hero-inner { max-width: 800px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: var(--pc-blue-light); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+  .breadcrumb a { color: var(--pc-blue-light); text-decoration: none; }
+  .category-tag { display: inline-block; background: #7B2FBE; color: white; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; margin-bottom: 16px; }
+  .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 900; color: white; line-height: 1.1; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  .page-hero h1 em { color: var(--pc-blue-electric); font-style: normal; }
+  .page-hero-desc { font-size: 17px; color: var(--pc-gray-light); max-width: 640px; line-height: 1.7; }
+
+  main { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  .article-content h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: var(--pc-navy); text-transform: uppercase; letter-spacing: 0.5px; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #7B2FBE; }
+  .article-content h3 { font-size: 20px; font-weight: 700; color: var(--pc-navy); margin: 28px 0 12px; }
+  .article-content p { font-size: 17px; line-height: 1.8; color: var(--pc-gray-dark); margin-bottom: 20px; }
+  .article-content ul { margin: 0 0 20px 24px; }
+  .article-content li { font-size: 17px; line-height: 1.8; color: var(--pc-gray-dark); margin-bottom: 8px; }
+  .article-content strong { color: var(--pc-navy); }
+  .article-content blockquote { border-left: 4px solid #7B2FBE; padding: 16px 20px; background: var(--pc-gray-light); margin: 24px 0; border-radius: 0 6px 6px 0; }
+  .article-content blockquote p { margin: 0; font-size: 18px; color: var(--pc-navy); font-weight: 600; }
+
+  .faq-section { background: var(--pc-gray-light); border-radius: 12px; padding: 32px; margin: 40px 0; }
+  .faq-section h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 900; color: var(--pc-navy); text-transform: uppercase; margin-bottom: 24px; }
+  .faq-item { margin-bottom: 24px; }
+  .faq-item h3 { font-size: 17px; font-weight: 700; color: var(--pc-blue); margin-bottom: 8px; }
+  .faq-item p { font-size: 16px; color: var(--pc-gray-dark); margin: 0; }
+
+  .cta-box { background: var(--pc-navy); border-radius: 12px; padding: 36px 32px; margin: 48px 0; text-align: center; border: 1px solid #7B2FBE; }
+  .cta-box-eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--pc-blue-light); margin-bottom: 12px; }
+  .cta-box h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 12px; }
+  .cta-box p { color: var(--pc-gray-light); font-size: 16px; margin-bottom: 24px; }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-green { background: var(--pc-green); color: white; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 6px; text-decoration: none; }
+  .btn-blue-outline { background: transparent; color: var(--pc-blue-light); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 6px; text-decoration: none; border: 1px solid var(--pc-blue); }
+
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+  .related-card { background: var(--pc-gray-light); border-radius: 8px; padding: 20px; text-decoration: none; border: 1px solid #e0e0e0; transition: all 0.2s; }
+  .related-card:hover { border-color: var(--pc-blue); }
+  .related-card-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--pc-blue); margin-bottom: 8px; }
+  .related-card h3 { font-size: 15px; font-weight: 700; color: var(--pc-navy); line-height: 1.4; }
+</style>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="breadcrumb"><a href="/">Hub</a> / Ekklesia</p>
+    <span class="category-tag">Ekklesia</span>
+    <h1>What Is <em>Ekklesia?</em></h1>
+    <p class="page-hero-desc">Jesus didn't say he would build a Sunday service. He said he would build His Ekklesia — and the gates of hell would not prevail against it.</p>
+  </div>
+</div>
+
+<main>
+  <div class="article-content">
+
+    <p>The word most English Bibles translate as "church" is the Greek word <strong>Ekklesia</strong> — and the translation loses something critical. Ekklesia does not mean a building, a service, or a denomination. It means "the called-out ones" — a community of people called out of the world's systems and into the mission of the King.</p>
+
+    <blockquote>
+      <p>Ekklesia is not a Sunday service. It is the called-out community of the King, commissioned to carry the mission of the Kingdom into every sphere of society.</p>
+    </blockquote>
+
+    <p>When Jesus stood at Caesarea Philippi — a place filled with pagan shrines and demonic worship — and declared "I will build my Ekklesia," He was making a statement. The community He was building would push back against the darkest strongholds of culture. Not retreat from them.</p>
+
+    <h2>The Difference Between Church and Ekklesia</h2>
+
+    <p>For most of church history, the model has been: build a building, attract people to a Sunday service, hope the community grows. The Ekklesia model is the opposite.</p>
+
+    <p>The Ekklesia goes out. It embeds in neighborhoods, workplaces, schools, and families. It finds the Person of Peace — the one God has prepared — and through that person reaches an entire community. It multiplies rather than accumulates.</p>
+
+    <p>A Sunday service asks "how do we get people in?" The Ekklesia asks "how do we multiply out?"</p>
+
+    <h2>Church Planting Movements (CPM)</h2>
+
+    <p>A Church Planting Movement is what happens when the Ekklesia model is working as Jesus designed it. New disciples immediately become disciple-makers. New Ekklesias start new Ekklesias. The movement reproduces itself without depending on any one leader.</p>
+
+    <p>In India, one church planting movement saw one million people baptized in a single year. The leader responsible for that — a man who personally baptized over 100,000 people — traced it all back to the simple strategy of Luke 10: pray, go, find the Person of Peace, heal, preach, teach, send.</p>
+
+    <p>That same strategy is available to every believer, in every city, in every nation on earth.</p>
+
+    <h2>The Proverbs 31 Ekklesia</h2>
+
+    <p>Proverbs 31 describes a woman of noble character — industrious, generous, strategic, God-fearing, and a blessing to everyone in her sphere. She is not passive. She is not contained within her home. She extends her hands to the needy, she considers a field and plants it, she speaks with wisdom.</p>
+
+    <p>This is the picture of what the Ekklesia should look like in a city. Not a community that waits for the city to come to it — but one that actively serves, plants, extends, and blesses every sphere it touches.</p>
+
+    <h2>The Luke 10 Strategy for Church Planting</h2>
+
+    <p>Jesus gave His disciples a seven-step strategy in Luke 10 and Matthew 10 that is the most field-tested church planting framework ever developed. He sent 72 people out with these instructions:</p>
+
+    <ul>
+      <li><strong>Pray</strong> — specifically for Workers</li>
+      <li><strong>Focus</strong> — filter to one people group or geography</li>
+      <li><strong>Go and Eat</strong> — get into the community, share meals</li>
+      <li><strong>Find the Person of Peace</strong> — the one God has prepared</li>
+      <li><strong>Heal</strong> — meet felt needs and demonstrate the Kingdom</li>
+      <li><strong>Preach</strong> — proclaim the good news of the Kingdom</li>
+      <li><strong>Teach and Send</strong> — teach obedience, then send them to do the same</li>
+    </ul>
+
+    <p>The process is circular — once you complete step 7, the new believers start at step 1. This is how movements multiply.</p>
+
+    <h2>What Happened to the Other Six Spheres</h2>
+
+    <p>The church has largely focused its energy on the Religious sphere — building bigger and better churches, hoping the community comes in. The other six Mind Molders — Government, Arts & Entertainment, Education, Business, Media, and Family — have been left largely without Kingdom influence.</p>
+
+    <p>A Proverbs 31 Ekklesia doesn't just plant churches. It plants Kingdom influence in every sphere. It trains people to find their burning bush — their God-given passion and calling — and to bring the commands of Jesus into whatever sphere God has called them to.</p>
+
+    <p>Within the commands of Jesus are the solutions to every problem in every nation. When a business is taught to operate by "let your yes be yes and your no be no," it builds trust. When a government is taught to care for the poor and the vulnerable, it reflects Kingdom values. You have just discipled a sphere of influence in one of the commands of Jesus.</p>
+
+  </div>
+
+  <div class="faq-section">
+    <h2>Common Questions About Ekklesia</h2>
+    <div class="faq-item">
+      <h3>Do I have to leave my church to be part of the Ekklesia?</h3>
+      <p>Not at all. The Ekklesia is not a different organization — it's a different posture. Any gathering of believers that is going out, multiplying, and extending Kingdom influence into its community is operating as Ekklesia, regardless of what it calls itself.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is a house church and is it the same as Ekklesia?</h3>
+      <p>A house church can be an Ekklesia — but not every house church functions that way. The key is multiplication and mission. A house church that stays small and inward is just a small church. An Ekklesia is always reproducing itself and extending into its community.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I start a church planting movement?</h3>
+      <p>You don't start a movement — you start obeying Luke 10. Pray for Workers in your community. Go to them. Find the Person of Peace. Heal their felt needs. Preach the good news. Teach them to obey. Send them out to do the same. The movement is a byproduct of obedience at scale.</p>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <p class="cta-box-eyebrow">Go Deeper</p>
+    <h2>The Worker Maker Community</h2>
+    <p>Get the Kingdom 24,902 system, the complete Luke 10 training, and every tool RK has built for church planting and multiplication.</p>
+    <div class="cta-buttons">
+      <a href="https://workermaker.com" class="btn-green">Join Worker Maker</a>
+      <a href="https://purposeconcepts.com" class="btn-blue-outline">Free Newsletter</a>
+    </div>
+  </div>
+
+  <div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--pc-navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;">Related Topics</h2>
+    <div class="related-grid">
+      <a href="/discipleship/person-of-peace" class="related-card">
+        <p class="related-card-tag">Discipleship</p>
+        <h3>Who Is the Person of Peace?</h3>
+      </a>
+      <a href="/discipleship" class="related-card">
+        <p class="related-card-tag">Discipleship</p>
+        <h3>What Is Discipleship?</h3>
+      </a>
+      <a href="/evangelism" class="related-card">
+        <p class="related-card-tag">Evangelism</p>
+        <h3>What Is Evangelism?</h3>
+      </a>
+      <a href="/digital-evangelism" class="related-card">
+        <p class="related-card-tag">Digital Evangelism</p>
+        <h3>The O2F Method</h3>
+      </a>
+    </div>
+  </div>
+
+</main>
+</Layout>

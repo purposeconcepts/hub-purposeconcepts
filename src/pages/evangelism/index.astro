@@ -1,0 +1,234 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="What Is Evangelism? The Complete Guide"
+  description="Evangelism is not yelling at people with a sign. It's showing the world how good the Father is so they want to come back to Him. The complete guide from RK Castillo."
+  category="Evangelism"
+>
+
+<style>
+  .page-hero { background: var(--pc-navy); padding: 56px 24px 48px; }
+  .page-hero-inner { max-width: 800px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: var(--pc-blue-light); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+  .breadcrumb a { color: var(--pc-blue-light); text-decoration: none; }
+  .category-tag { display: inline-block; background: var(--pc-blue); color: white; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; margin-bottom: 16px; }
+  .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 900; color: white; line-height: 1.1; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  .page-hero h1 em { color: var(--pc-blue-electric); font-style: normal; }
+  .page-hero-desc { font-size: 17px; color: var(--pc-gray-light); max-width: 640px; line-height: 1.7; }
+
+  main { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .article-content h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: var(--pc-navy); text-transform: uppercase; letter-spacing: 0.5px; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--pc-blue); }
+  .article-content h3 { font-size: 20px; font-weight: 700; color: var(--pc-navy); margin: 28px 0 12px; }
+  .article-content p { font-size: 17px; line-height: 1.8; color: var(--pc-gray-dark); margin-bottom: 20px; }
+  .article-content ul { margin: 0 0 20px 24px; }
+  .article-content li { font-size: 17px; line-height: 1.8; color: var(--pc-gray-dark); margin-bottom: 8px; }
+  .article-content strong { color: var(--pc-navy); }
+  .article-content blockquote { border-left: 4px solid var(--pc-blue); padding: 16px 20px; background: var(--pc-gray-light); margin: 24px 0; border-radius: 0 6px 6px 0; }
+  .article-content blockquote p { margin: 0; font-size: 18px; color: var(--pc-navy); font-weight: 600; }
+
+  .process-steps { margin: 32px 0; }
+  .step { display: flex; gap: 20px; margin-bottom: 28px; align-items: flex-start; }
+  .step-num { flex-shrink: 0; width: 44px; height: 44px; background: var(--pc-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 900; }
+  .step-content h3 { font-size: 18px; font-weight: 700; color: var(--pc-navy); margin-bottom: 6px; }
+  .step-content p { font-size: 16px; color: var(--pc-gray-dark); margin: 0; line-height: 1.7; }
+
+  .faq-section { background: var(--pc-gray-light); border-radius: 12px; padding: 32px; margin: 40px 0; }
+  .faq-section h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 900; color: var(--pc-navy); text-transform: uppercase; margin-bottom: 24px; }
+  .faq-item { margin-bottom: 24px; }
+  .faq-item h3 { font-size: 17px; font-weight: 700; color: var(--pc-blue); margin-bottom: 8px; }
+  .faq-item p { font-size: 16px; color: var(--pc-gray-dark); margin: 0; }
+
+  .cta-box { background: var(--pc-navy); border-radius: 12px; padding: 36px 32px; margin: 48px 0; text-align: center; border: 1px solid var(--pc-blue); }
+  .cta-box-eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--pc-blue-light); margin-bottom: 12px; }
+  .cta-box h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 12px; }
+  .cta-box p { color: var(--pc-gray-light); font-size: 16px; margin-bottom: 24px; }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-green { background: var(--pc-green); color: white; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 6px; text-decoration: none; }
+  .btn-blue-outline { background: transparent; color: var(--pc-blue-light); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 6px; text-decoration: none; border: 1px solid var(--pc-blue); }
+
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+  .related-card { background: var(--pc-gray-light); border-radius: 8px; padding: 20px; text-decoration: none; border: 1px solid #e0e0e0; transition: all 0.2s; }
+  .related-card:hover { border-color: var(--pc-blue); }
+  .related-card-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--pc-blue); margin-bottom: 8px; }
+  .related-card h3 { font-size: 15px; font-weight: 700; color: var(--pc-navy); line-height: 1.4; }
+</style>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="breadcrumb"><a href="/">Hub</a> / Evangelism</p>
+    <span class="category-tag">Evangelism</span>
+    <h1>What Is <em>Evangelism?</em></h1>
+    <p class="page-hero-desc">Most people think evangelism is yelling at strangers with an angry sign. It's not. Here's what it actually is — and why every follower of Jesus can do it.</p>
+  </div>
+</div>
+
+<main>
+  <div class="article-content">
+
+    <p>Evangelism has an image problem. When most people hear the word, they picture someone on a street corner with a bullhorn, warning strangers about hellfire. That image has kept millions of followers of Jesus from ever sharing their faith.</p>
+
+    <p>But that picture couldn't be further from what Jesus actually modeled and commanded.</p>
+
+    <blockquote>
+      <p>The purpose of evangelism is to show the world how good the Father is — so that people would want to come back to Him.</p>
+    </blockquote>
+
+    <h2>What Evangelism Is Not</h2>
+
+    <p>Before we talk about what evangelism is, it helps to clear the decks on what it isn't.</p>
+
+    <p>Evangelism is not about convincing people they are sinners headed for hell. It is not about getting people to say a prayer so they can go to heaven when they die. It is not about winning arguments or out-debating someone into the Kingdom.</p>
+
+    <p>Jesus never said "I am the way, the truth, and the life — no one goes to heaven except through me." He said no one goes to <strong>the Father</strong> except through me. The goal was always reunion with the Father — not escape to heaven.</p>
+
+    <h2>What Evangelism Actually Is</h2>
+
+    <p>Evangelism is getting people back to the Father so they can be filled with the Holy Spirit and begin to show the world what Jesus is like.</p>
+
+    <p>That's it. That's the whole goal.</p>
+
+    <p>When Peter preached on the day of Pentecost and thousands interrupted him asking "What do we need to do?", his answer was not "repent and be baptized so you can go to heaven when you die." His answer was: repent and be baptized so you can receive the gift of the Holy Spirit.</p>
+
+    <p>The Holy Spirit is the point. Once someone has the Holy Spirit, He teaches them everything they need to know about Jesus, gives them the power to live like Jesus, and sends them out to represent Jesus to the world.</p>
+
+    <h2>The Good News of the Kingdom</h2>
+
+    <p>Jesus preached about the Kingdom of God more than any other topic — over 50 times in the book of Matthew alone. He talked about hell only 4 times across all four Gospels.</p>
+
+    <p>The Gospel is good news — specifically, good news of the Kingdom of God. Not fire insurance. Not a ticket to a better afterlife. A whole new reality available right now.</p>
+
+    <p>Think about it this way. If you had a friend from the Netherlands who started telling you about their kingdom — how their queen provides healthcare for everyone, how she covers income if you lose your job, how citizens are taken care of — you'd say they were sharing good news about their kingdom.</p>
+
+    <p>The Kingdom of God has benefits too — righteousness, peace, and joy in the Holy Spirit. No sickness in heaven means we have the right to pray sickness out of people's bodies right now. When we pray "Your Kingdom come, Your will be done on earth as it is in heaven" — we're asking for heaven's reality to invade earth's circumstances.</p>
+
+    <h2>The Story Evangelism Process</h2>
+
+    <p>So how do you actually do it? Here is the complete process developed through years of field-tested evangelism across six continents.</p>
+
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>The Miracle Question</h3>
+          <p>"If God could do a miracle in your life, what would it be?" — 13 words that start a conversation about Jesus anywhere, anytime, without being pushy or weird.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Pray for the Miracle</h3>
+          <p>Short, sweet, to the point, and always in command form. Don't ask God "if it's your will." His will to heal is already established. Command the sickness to leave. Then stop and check.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Share Your Jesus Story</h3>
+          <p>Your 15-second testimony. Two words for before. A phrase about why you decided to follow Jesus. Two words for after. Finish with: "What do you think about Jesus?"</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Who Is Jesus To You</h3>
+          <p>Don't talk about the religious leader. Talk about your friend — the most faithful, joyful, loving, powerful person you have ever met. This is your favorite conversation to have.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h3>Good Bad Give Go</h3>
+          <p>God made everything Good. Sin brought the Bad. People try to deal with brokenness in broken ways. Jesus Gave His life and rose from the dead. Now we Go and make the world right again.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h3>Why Who How</h3>
+          <p>When they say yes — give them something to do immediately. Ask for 5 names of people who need to hear. Ask which one they will tell today. Follow up tomorrow. This is how you find Workers.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>The Forgotten Half of the Gospel</h2>
+
+    <p>Most of the church preaches a Gospel that is 90% cross and 10% Resurrection. But the Bible flips that. Paul spent one verse on the cross, one verse on the burial, and the rest of 1 Corinthians 15 on the risen Jesus.</p>
+
+    <p>The Resurrection is not a footnote — it is the entire foundation. If Christ has not been raised, faith is useless. Everything in Christianity depends on one fact: they really did kill Jesus, and he really did come back from the dead.</p>
+
+    <p>That's not religion. That's news. And it changes everything.</p>
+
+    <h2>Signs Follow Believers</h2>
+
+    <p>Jesus said in Mark 16 that signs would follow those who believe. Not pastors. Not evangelists with a special gift. Believers.</p>
+
+    <p>If you are a follower of Jesus, you have the right — and the responsibility — to lay hands on the sick and let God do the healing. It's not your job to heal. It's your job to pray. God's job is the healing.</p>
+
+    <p>Signs point to something greater than themselves. It is much easier to lead someone to Jesus after they just got up out of a wheelchair. The miracle is not the destination — it's the sign pointing to the King.</p>
+
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Common Questions About Evangelism</h2>
+
+    <div class="faq-item">
+      <h3>Do I have to be an evangelist to share my faith?</h3>
+      <p>No. The word "evangelist" appears only 3 times in the New Testament. The signs Jesus promised in Mark 16 follow believers — not a special class of ministers. Every follower of Jesus is called to share the good news.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if I don't know enough theology?</h3>
+      <p>You don't need theology — you need a story. The Gadarene demoniac had been saved for five minutes when Jesus sent him out. His story was simple: "I was crazy, Jesus set me free." That was enough to reach 10 cities.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if someone says no?</h3>
+      <p>Rejection is a reward. Jesus said in Luke 6 that those rejected for His sake have a great reward in heaven. When you embrace rejection as a value, you stop being afraid — and that's when you start seeing God move.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Should I memorize a script?</h3>
+      <p>Learn the frameworks — the Miracle Question, the 2 Phrase 2, the Good Bad Give Go. Then make them yours. The goal is to be so natural that it feels like you're telling a friend about someone you love. Because that's exactly what it is.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <p class="cta-box-eyebrow">Ready to go deeper?</p>
+    <h2>The Worker Maker Community</h2>
+    <p>Get every tool, training, and system RK has built for evangelism, discipleship, and church planting — including the full Story Evangelism training.</p>
+    <div class="cta-buttons">
+      <a href="https://workermaker.com" class="btn-green">Join Worker Maker</a>
+      <a href="https://purposeconcepts.com" class="btn-blue-outline">Free Newsletter</a>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--pc-navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;">Related Topics</h2>
+    <div class="related-grid">
+      <a href="/evangelism/miracle-question" class="related-card">
+        <p class="related-card-tag">Evangelism</p>
+        <h3>The Miracle Question</h3>
+      </a>
+      <a href="/evangelism/how-to-heal-the-sick" class="related-card">
+        <p class="related-card-tag">Evangelism</p>
+        <h3>How to Heal the Sick</h3>
+      </a>
+      <a href="/discipleship" class="related-card">
+        <p class="related-card-tag">Discipleship</p>
+        <h3>What Is Discipleship?</h3>
+      </a>
+      <a href="/digital-evangelism" class="related-card">
+        <p class="related-card-tag">Digital Evangelism</p>
+        <h3>The O2F Method</h3>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+</Layout>

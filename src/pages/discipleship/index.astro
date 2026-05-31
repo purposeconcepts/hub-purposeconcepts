@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="What Is Discipleship? Discipling Nations, Not Just People"
+  description="Jesus didn't say to make disciples IN nations. He said to disciple nations. Here's the difference — and why it changes everything about how we follow the Great Commission."
+  category="Discipleship"
+>
+
+<style>
+  .page-hero { background: var(--pc-navy); padding: 56px 24px 48px; }
+  .page-hero-inner { max-width: 800px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: var(--pc-blue-light); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+  .breadcrumb a { color: var(--pc-blue-light); text-decoration: none; }
+  .category-tag { display: inline-block; background: var(--pc-green); color: white; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; margin-bottom: 16px; }
+  .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 900; color: white; line-height: 1.1; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  .page-hero h1 em { color: var(--pc-blue-electric); font-style: normal; }
+  .page-hero-desc { font-size: 17px; color: var(--pc-gray-light); max-width: 640px; line-height: 1.7; }
+
+  main { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .article-content h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: var(--pc-navy); text-transform: uppercase; letter-spacing: 0.5px; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--pc-green); }
+  .article-content h3 { font-size: 20px; font-weight: 700; color: var(--pc-navy); margin: 28px 0 12px; }
+  .article-content p { font-size: 17px; line-height: 1.8; color: var(--pc-gray-dark); margin-bottom: 20px; }
+  .article-content ul { margin: 0 0 20px 24px; }
+  .article-content li { font-size: 17px; line-height: 1.8; color: var(--pc-gray-dark); margin-bottom: 8px; }
+  .article-content strong { color: var(--pc-navy); }
+  .article-content blockquote { border-left: 4px solid var(--pc-green); padding: 16px 20px; background: var(--pc-gray-light); margin: 24px 0; border-radius: 0 6px 6px 0; }
+  .article-content blockquote p { margin: 0; font-size: 18px; color: var(--pc-navy); font-weight: 600; }
+
+  .four-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+  .field-card { background: var(--pc-navy); border-radius: 10px; padding: 24px; }
+  .field-number { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: var(--pc-green); margin-bottom: 8px; }
+  .field-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 8px; }
+  .field-card p { font-size: 14px; color: #aaa; margin: 0; line-height: 1.6; }
+
+  .faq-section { background: var(--pc-gray-light); border-radius: 12px; padding: 32px; margin: 40px 0; }
+  .faq-section h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 900; color: var(--pc-navy); text-transform: uppercase; margin-bottom: 24px; }
+  .faq-item { margin-bottom: 24px; }
+  .faq-item h3 { font-size: 17px; font-weight: 700; color: var(--pc-blue); margin-bottom: 8px; }
+  .faq-item p { font-size: 16px; color: var(--pc-gray-dark); margin: 0; }
+
+  .cta-box { background: var(--pc-navy); border-radius: 12px; padding: 36px 32px; margin: 48px 0; text-align: center; border: 1px solid var(--pc-green); }
+  .cta-box-eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--pc-blue-light); margin-bottom: 12px; }
+  .cta-box h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 12px; }
+  .cta-box p { color: var(--pc-gray-light); font-size: 16px; margin-bottom: 24px; }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-green { background: var(--pc-green); color: white; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 6px; text-decoration: none; }
+  .btn-blue-outline { background: transparent; color: var(--pc-blue-light); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 6px; text-decoration: none; border: 1px solid var(--pc-blue); }
+
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+  .related-card { background: var(--pc-gray-light); border-radius: 8px; padding: 20px; text-decoration: none; border: 1px solid #e0e0e0; transition: all 0.2s; }
+  .related-card:hover { border-color: var(--pc-blue); }
+  .related-card-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--pc-blue); margin-bottom: 8px; }
+  .related-card h3 { font-size: 15px; font-weight: 700; color: var(--pc-navy); line-height: 1.4; }
+
+  @media (max-width: 600px) { .four-fields { grid-template-columns: 1fr; } }
+</style>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="breadcrumb"><a href="/">Hub</a> / Discipleship</p>
+    <span class="category-tag">Discipleship</span>
+    <h1>What Is <em>Discipleship?</em></h1>
+    <p class="page-hero-desc">Jesus didn't say to make disciples in nations. He said to disciple nations. One word changes everything about the Great Commission.</p>
+  </div>
+</div>
+
+<main>
+  <div class="article-content">
+
+    <p>For centuries the church has been focused on making disciples — individual people who follow Jesus. And while that is good, it misses the full scope of what Jesus actually commanded.</p>
+
+    <p>The Great Commission in Matthew 28 uses the Greek word <strong>matheteusate</strong> — disciple as a verb. The noun being discipled is not a person. It is a nation. "Go and disciple all nations."</p>
+
+    <blockquote>
+      <p>We have been content to make disciples IN nations when Jesus said to make disciples OF nations.</p>
+    </blockquote>
+
+    <p>That one distinction changes the entire mission.</p>
+
+    <h2>Teaching Obedience, Not Information</h2>
+
+    <p>The Matthew Commission says to disciple nations by teaching them to <strong>obey</strong> everything Jesus commanded — not to teach them about His commands. There is a massive difference.</p>
+
+    <p>Teaching someone about the command to heal the sick is one thing. Teaching them how to obey it — going with them, praying together, debriefing what happened, sending them out to pray for 100 more people — that is discipleship.</p>
+
+    <p>True knowledge comes from experience. You don't know a jiu-jitsu move because you watched it on video. You know it when you've done it a thousand times. The same is true for every command of Jesus.</p>
+
+    <h2>The Two Commissions</h2>
+
+    <p>There are two Great Commissions — and understanding the difference between them changes how you approach the mission entirely.</p>
+
+    <p><strong>The Mark Commission</strong> is generational — every believer in every generation sharing the good news with as many people as possible. This commission never ends until Jesus returns. Four more people are born every second. The harvest is always growing.</p>
+
+    <p><strong>The Matthew Commission</strong> is multi-generational — building systems and processes that outlive any individual, like McDonald's. Ray Kroc built a system so replicable that a 15-year-old can run a franchise. Jesus built a discipleship system that should work the same way — you could hand it to any generation, anywhere in the world, and it still works.</p>
+
+    <h2>The 4 Fields Framework</h2>
+
+    <p>To reach the all and the every — every person, all the nations — we need to multiply Workers who know four things:</p>
+
+    <div class="four-fields">
+      <div class="field-card">
+        <div class="field-number">01</div>
+        <h3>Go</h3>
+        <p>Get out of the building. Every movement starts with someone going to where the people are.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-number">02</div>
+        <h3>Gospel</h3>
+        <p>Know how to preach the good news of the Kingdom clearly and confidently to anyone.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-number">03</div>
+        <h3>Grow</h3>
+        <p>Disciple new believers in obedience to everything Jesus commanded.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-number">04</div>
+        <h3>Gather</h3>
+        <p>Bring those disciples together in multiplying Ekklesias that reproduce themselves.</p>
+      </div>
+    </div>
+
+    <h2>The Worker Maker Framework</h2>
+
+    <p>Jesus's first instruction in Luke 10 is to pray for Workers — not souls. He had all His workers with Him and still told them to pray for more. Why? Because Workers come from the harvest, for the harvest.</p>
+
+    <p>The fruit-bearing seed in the parable of the four soils — the one that produces 30, 60, 100 fold — that is the Worker. That is who we are looking for.</p>
+
+    <p>You know you have found a Worker when they say yes to three things: the messenger, the message, and the mission. Give them something to do immediately. The Gadarene demoniac was sent out the same moment he was set free. He had one story — "I was crazy, Jesus set me free" — and it was enough to reach 10 cities.</p>
+
+    <h2>Discovery Bible Study</h2>
+
+    <p>One of the most powerful discipleship tools for reaching people who don't yet follow Jesus is the Discovery Bible Study — a simple three-part structure that works anywhere in the world.</p>
+
+    <p><strong>Look Back:</strong> What are you thankful for? What challenges are you facing? How did you obey or share since we last met?</p>
+
+    <p><strong>Look Up:</strong> Read one of the 7 Stories of Hope from the Gospel of John. Ask: What does this say about God? What does it say about people? How would your life change if you put this into practice?</p>
+
+    <p><strong>Look Out:</strong> Who needs to hear this story? How can we help someone facing a challenge we heard about?</p>
+
+    <p>Close every DBS the same way: "Are you ready to be part of God's family to help people the way Jesus did?"</p>
+
+    <h2>Discipling Nations Through the 7 Mind Molders</h2>
+
+    <p>In 1975, Loren Cunningham, Bill Bright, and Francis Schaeffer all received the same revelation from God: if you want to disciple a nation, you have to change the way the nation thinks. Culture dictates thought — and seven spheres of influence shape culture in every nation on earth.</p>
+
+    <ul>
+      <li>Religion</li>
+      <li>Government</li>
+      <li>Arts & Entertainment</li>
+      <li>Education</li>
+      <li>Business</li>
+      <li>Media</li>
+      <li>Family</li>
+    </ul>
+
+    <p>The church has largely focused on only one — Religion. The other six have been left to run without Kingdom influence. Discipling nations means finding your sphere, becoming a problem solver in it, and teaching that sphere to live by the commands of Jesus — even if you never use Christian language to do it.</p>
+
+  </div>
+
+  <div class="faq-section">
+    <h2>Common Questions About Discipleship</h2>
+    <div class="faq-item">
+      <h3>Is "making disciples" wrong language?</h3>
+      <p>Disciples are not manufactured — they are formed through relationship and obedience. The word "make" treats discipleship like a product line. The Great Commission uses "disciple" as a verb — it's something you do with someone, not to someone.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How long does discipleship take?</h3>
+      <p>Jesus spent 18 months with His followers before choosing the 12 apostles. But He also sent the Gadarene demoniac out the same hour he was saved. The goal is obedience, not a program. Some people are ready to multiply immediately. Others need time. Follow the Holy Spirit.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is a Disciple Making Movement (DMM)?</h3>
+      <p>A DMM happens when new disciples immediately begin discipling others — and those disciples disciple others — until the movement reproduces itself without the original planter. It's the pattern of Luke 10: find the Person of Peace, disciple them, send them to do the same.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can a whole nation really be discipled?</h3>
+      <p>Revelation 21:24 says "the nations will walk by its light." Somewhere between Matthew 28 and Revelation 21 — it happens. Nations are discipled and begin walking according to the ways of the King. It is not only possible — it is probable.</p>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <p class="cta-box-eyebrow">Take The Next Step</p>
+    <h2>The Worker Maker Community</h2>
+    <p>Get the Be One Train One training, Discovery Bible Study tools, and every system RK has built for multiplying disciples and discipling nations.</p>
+    <div class="cta-buttons">
+      <a href="https://workermaker.com" class="btn-green">Join Worker Maker</a>
+      <a href="https://purposeconcepts.com" class="btn-blue-outline">Free Newsletter</a>
+    </div>
+  </div>
+
+  <div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--pc-navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;">Related Topics</h2>
+    <div class="related-grid">
+      <a href="/discipleship/person-of-peace" class="related-card">
+        <p class="related-card-tag">Discipleship</p>
+        <h3>Who Is the Person of Peace?</h3>
+      </a>
+      <a href="/discipleship/discovery-bible-study" class="related-card">
+        <p class="related-card-tag">Discipleship</p>
+        <h3>How to Run a Discovery Bible Study</h3>
+      </a>
+      <a href="/evangelism" class="related-card">
+        <p class="related-card-tag">Evangelism</p>
+        <h3>What Is Evangelism?</h3>
+      </a>
+      <a href="/ekklesia" class="related-card">
+        <p class="related-card-tag">Ekklesia</p>
+        <h3>What Is Ekklesia?</h3>
+      </a>
+    </div>
+  </div>
+
+</main>
+</Layout>

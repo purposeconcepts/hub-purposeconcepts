@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Page Not Found" description="The page you are looking for does not exist.">
+<style>
+  .not-found { text-align: center; padding: 100px 24px; }
+  .not-found h1 { font-family: 'Barlow Condensed', sans-serif; font-size: 80px; font-weight: 900; color: var(--pc-blue); text-transform: uppercase; margin-bottom: 16px; }
+  .not-found p { font-size: 18px; color: var(--pc-gray-dark); margin-bottom: 32px; }
+  .btn-green { background: var(--pc-green); color: white; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 6px; text-decoration: none; }
+</style>
+<div class="not-found">
+  <h1>404</h1>
+  <p>This page doesn't exist — but the Great Commission does. Let's get you back on mission.</p>
+  <a href="/" class="btn-green">Back to the Hub</a>
+</div>
+</Layout>

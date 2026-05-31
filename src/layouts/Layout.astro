@@ -1,0 +1,474 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  category?: string;
+}
+const { title, description, category = '' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | Purpose Concepts Hub</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:site_name" content="Purpose Concepts Hub" />
+  <meta property="og:type" content="article" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --pc-blue: #1170C3;
+      --pc-blue-thumbnail: #096EBC;
+      --pc-green: #0BCA41;
+      --pc-black: #0A0A0A;
+      --pc-navy: #1A1A2E;
+      --pc-white: #FFFFFF;
+      --pc-gray-light: #EAEAEA;
+      --pc-blue-light: #61BCF2;
+      --pc-blue-electric: #00AAFF;
+      --pc-gray-dark: #515151;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: #fff;
+      color: var(--pc-gray-dark);
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--pc-navy);
+      border-bottom: 3px solid var(--pc-blue);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    .nav-eyebrow {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--pc-blue-light);
+      text-transform: uppercase;
+    }
+    .nav-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .nav-title span { color: var(--pc-blue-electric); }
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--pc-gray-light);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .nav-links a:hover { background: #ffffff15; color: white; }
+    .nav-links a.active { color: var(--pc-blue-electric); }
+
+    /* HERO BREADCRUMB */
+    .page-hero {
+      background: var(--pc-navy);
+      padding: 48px 24px 40px;
+      border-bottom: 1px solid #ffffff10;
+    }
+    .page-hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--pc-blue-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--pc-blue-light); text-decoration: none; }
+    .breadcrumb a:hover { color: white; }
+    .page-hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 em {
+      color: var(--pc-blue-electric);
+      font-style: normal;
+    }
+    .page-hero-desc {
+      font-size: 17px;
+      color: var(--pc-gray-light);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+    .category-tag {
+      display: inline-block;
+      background: var(--pc-blue);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+
+    /* MAIN CONTENT */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ARTICLE CONTENT */
+    .article-content h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--pc-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--pc-blue);
+    }
+    .article-content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--pc-navy);
+      margin: 28px 0 12px;
+    }
+    .article-content p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--pc-gray-dark);
+      margin-bottom: 20px;
+    }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px;
+    }
+    .article-content li {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--pc-gray-dark);
+      margin-bottom: 8px;
+    }
+    .article-content strong { color: var(--pc-navy); }
+    .article-content blockquote {
+      border-left: 4px solid var(--pc-blue);
+      padding: 16px 20px;
+      background: var(--pc-gray-light);
+      margin: 24px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .article-content blockquote p {
+      margin: 0;
+      font-size: 18px;
+      color: var(--pc-navy);
+      font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq-section {
+      background: var(--pc-gray-light);
+      border-radius: 12px;
+      padding: 32px;
+      margin: 40px 0;
+    }
+    .faq-section h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--pc-navy);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      border: none;
+    }
+    .faq-item { margin-bottom: 24px; }
+    .faq-item h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--pc-blue);
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 16px;
+      color: var(--pc-gray-dark);
+      margin: 0;
+    }
+
+    /* RELATED */
+    .related-section { margin: 48px 0 0; }
+    .related-section h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--pc-navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .related-card {
+      background: var(--pc-gray-light);
+      border-radius: 8px;
+      padding: 20px;
+      text-decoration: none;
+      border: 1px solid #e0e0e0;
+      transition: all 0.2s;
+    }
+    .related-card:hover { border-color: var(--pc-blue); transform: translateY(-2px); }
+    .related-card-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--pc-blue);
+      margin-bottom: 8px;
+    }
+    .related-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--pc-navy);
+      line-height: 1.4;
+    }
+
+    /* CTA BOX */
+    .cta-box {
+      background: var(--pc-navy);
+      border-radius: 12px;
+      padding: 36px 32px;
+      margin: 48px 0;
+      text-align: center;
+      border: 1px solid var(--pc-blue);
+    }
+    .cta-box-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--pc-blue-light);
+      margin-bottom: 12px;
+    }
+    .cta-box h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      border: none;
+      padding: 0;
+    }
+    .cta-box p {
+      color: var(--pc-gray-light);
+      font-size: 16px;
+      margin-bottom: 24px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-green {
+      background: var(--pc-green);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-green:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-blue {
+      background: transparent;
+      color: var(--pc-blue-light);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 1px solid var(--pc-blue);
+      transition: all 0.2s;
+    }
+    .btn-blue:hover { background: var(--pc-blue); color: white; }
+
+    /* FOOTER */
+    footer {
+      background: var(--pc-black);
+      color: var(--pc-gray-light);
+      padding: 48px 24px;
+      margin-top: 80px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-brand-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .footer-brand-name span { color: var(--pc-blue-electric); }
+    .footer-desc { font-size: 14px; color: #888; line-height: 1.6; margin-bottom: 16px; }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--pc-blue-light);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a {
+      color: #888;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: white; }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid #ffffff10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <span class="nav-eyebrow">Purpose Concepts</span>
+      <span class="nav-title">The <span>Hub</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/evangelism">Evangelism</a></li>
+      <li><a href="/discipleship">Discipleship</a></li>
+      <li><a href="/ekklesia">Ekklesia</a></li>
+      <li><a href="/digital-evangelism">Digital Evangelism</a></li>
+    </ul>
+  </div>
+</nav>
+
+<slot />
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Purpose <span>Concepts</span></div>
+      <p class="footer-desc">Empowering, equipping, and training people to find their place in God's plan to reach everyone and disciple all the nations.</p>
+      <a href="https://purposeconcepts.com" class="btn-blue" style="font-size:12px;padding:8px 16px;">purposeconcepts.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Evangelism</h4>
+      <ul>
+        <li><a href="/evangelism">What is Evangelism?</a></li>
+        <li><a href="/evangelism/miracle-question">The Miracle Question</a></li>
+        <li><a href="/evangelism/how-to-heal-the-sick">How to Heal the Sick</a></li>
+        <li><a href="/evangelism/cast-out-demons">Cast Out Demons</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Discipleship</h4>
+      <ul>
+        <li><a href="/discipleship">What is Discipleship?</a></li>
+        <li><a href="/discipleship/discovery-bible-study">Discovery Bible Study</a></li>
+        <li><a href="/discipleship/discipling-nations">Discipling Nations</a></li>
+        <li><a href="/discipleship/person-of-peace">Person of Peace</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://purposeconcepts.com">Newsletter</a></li>
+        <li><a href="https://workermaker.com">Worker Maker Community</a></li>
+        <li><a href="https://o2fmethod.com">Visitors By Sunday</a></li>
+        <li><a href="/digital-evangelism">Digital Evangelism</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© {new Date().getFullYear()} Purpose Concepts. All rights reserved.</span>
+    <span>hub.purposeconcepts.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
