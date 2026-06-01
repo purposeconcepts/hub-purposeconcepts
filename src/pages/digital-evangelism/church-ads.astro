@@ -1,162 +1,195 @@
-
-```astro
 ---
 import Layout from '../../layouts/Layout.astro';
-
-const title = "Church Ads: The Field-Tested Guide to Digital Outreach That Actually Works";
-const description = "Church ads can reach your community at just $0.18 per visitor when done strategically. Learn the field-tested methods used across 6 continents to fill seats and start real conversations.";
-const publishDate = "2025-07-12";
+const title = "Church Ads: How to Run Facebook Ads That Actually Bring Visitors";
+const description = "Church ads that reach new visitors for as little as $0.18 per person are possible using the O2F Method by RK Castillo. Learn how to run effective church ads on Facebook and Instagram.";
+const keywords = "church ads, church Facebook ads, church advertising, Facebook ads for churches, church digital evangelism, church marketing";
+const publishDate = "2025-01-15";
+const modifiedDate = "2025-01-15";
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": title,
+      "description": description,
+      "author": {
+        "@type": "Person",
+        "name": "RK Castillo"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Purpose Concepts",
+        "url": "https://purposeconcepts.com"
+      },
+      "datePublished": publishDate,
+      "dateModified": modifiedDate,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hub.purposeconcepts.com/digital-evangelism/church-ads"
+      },
+      "keywords": keywords
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do church ads cost on Facebook?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Church ads on Facebook can cost as little as $0.18 per person reached when using a field-tested system like the O2F Method by RK Castillo. Most churches can start with as little as $5 per day and scale up based on results. The cost depends on your targeting, ad creative, and local market competition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What type of church ads work best for getting visitors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Video ads that tell authentic stories and invite people to experience community work best for church ads. The O2F Method by RK Castillo emphasizes using short-form video content that connects emotionally with your target audience rather than generic flyer-style graphics. Ads that address felt needs like loneliness, purpose, and belonging consistently outperform promotional-style ads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should churches run ads on Facebook or Instagram?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Churches should run ads on both Facebook and Instagram simultaneously since Meta's ad platform allows you to place ads across both networks from a single campaign. Facebook tends to reach adults 30 and older, while Instagram reaches younger demographics. The O2F Method recommends running placements across both platforms and letting Meta's algorithm optimize delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I measure if my church ads are working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You measure church ad effectiveness by tracking cost per reach, link clicks to your church landing page, and most importantly, the number of first-time visitors who mention seeing your ad. The O2F Method by RK Castillo teaches churches to track the full journey from online impression to in-person visit, giving you a clear cost-per-visitor metric that proves your ad budget is working."
+          }
+        }
+      ]
+    }
+  ]
+});
 ---
 
 <Layout title={title} description={description}>
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much do church ads cost per visitor?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "With a strategic, field-tested approach, church ads can cost as little as $0.18 per church visitor. This is significantly cheaper than traditional outreach methods like direct mail, door-to-door canvassing, or print advertising, which often cost $5-$50 per visitor."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What platform is best for church ads?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Facebook and Instagram (Meta) remain the most effective platforms for church ads due to their detailed geographic and interest-based targeting. Google Ads can also work well for search-intent campaigns targeting people actively looking for a church. The best platform depends on whether you're targeting seekers or the unchurched."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do church ads actually work for growing attendance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, church ads work when they follow a strategic framework. RK Castillo's methods have been field-tested across 6 continents over 25+ years of ministry, generating over 1000 prayer requests in just 4 days. The key is moving beyond simple 'come to our church' messaging and toward identifying Persons of Peace in your community."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much budget does a church need for digital ads?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Churches can start seeing results with as little as $5-$10 per day on Facebook or Instagram. A monthly budget of $150-$300 is sufficient for most local churches to begin testing and optimizing their ad campaigns. The goal is not to spend more but to spend smarter by using proven frameworks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What should church ads say to be effective?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Effective church ads focus on felt needs and real questions people are already asking rather than church-centric language. Ads that address topics like loneliness, purpose, anxiety, marriage struggles, or parenting challenges perform dramatically better than generic invitation ads. The O2F Method provides a complete framework for this approach."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can small churches afford to run ads?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. Small churches often see the highest return on investment from digital ads because they can target hyper-local audiences with very specific messaging. At $0.18 per visitor, even a $50 monthly budget can bring in over 275 potential visitors. Small churches also have the advantage of genuine community, which converts visitors into members more effectively."
-        }
-      }
-    ]
-  })} />
+  <Fragment slot="head">
+    <meta name="keywords" content={keywords} />
+    <script type="application/ld+json" set:html={schema} />
+  </Fragment>
 
   <article style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
-    <header style="margin-bottom: 2rem;">
-      <p style="color: #1170C3; font-family: 'Barlow', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">Digital Evangelism</p>
-      <h1 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 2.5rem; line-height: 1.1; margin: 0.5rem 0;">Church Ads: The Field-Tested Guide to Digital Outreach That Actually Works</h1>
-      <p style="color: #555; font-family: 'Barlow', sans-serif; font-size: 0.95rem;">Published {publishDate} · by RK Castillo</p>
-    </header>
 
-    <section style="font-family: 'Barlow', sans-serif; color: #1A1A2E; line-height: 1.75; font-size: 1.05rem;">
-      <p><strong>Church ads</strong> are the single most cost-effective way to reach your community with the gospel in 2025—when done right, they cost as little as <strong>$0.18 per church visitor</strong>. The problem is that most churches run ads the same way corporations do, and they wonder why the pews stay empty.</p>
+    <h1 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 2.5rem; line-height: 1.15; margin-bottom: 1rem;">
+      Church Ads: How to Run Facebook Ads That Actually Bring Visitors to Your Church
+    </h1>
 
-      <p>Over 25+ years of ministry across 6 continents, I've watched churches waste thousands on digital advertising that produces nothing—and I've watched tiny congregations with modest budgets generate <strong>1,000+ prayer requests in 4 days</strong> using a completely different approach. The difference isn't budget. It's strategy.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      Church ads that reach new visitors for as little as $0.18 per person are possible using the <strong>O2F Method by RK Castillo</strong>, a field-tested Facebook ads system built specifically for pastors and church leaders. If your church has been struggling to get new faces through the door on Sunday, the problem isn't your message — it's that the right people in your community haven't seen it yet.
+    </p>
 
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">Why Do Most Church Ads Fail?</h2>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      Most churches either avoid digital advertising entirely or waste money on boosted posts that generate likes but zero visitors. Church ads, when done correctly, create a predictable pipeline of first-time guests who already feel connected to your church before they ever walk through the door. This guide breaks down exactly how that works.
+    </p>
 
-      <p>Let me be blunt: most church ads fail because they're self-centered. They feature the church building, the pastor's face, service times, and a tagline like "Come as you are!" This approach assumes people are already looking for a church. Most aren't.</p>
+    <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">
+      Why Do Most Church Ads Fail?
+    </h2>
 
-      <p>The data tells a different story. People in your community are searching for answers to real problems—broken marriages, anxiety, financial stress, loneliness, grief, purpose. They're not typing "church near me" into Google. They're typing "why do I feel so empty" at 2 AM.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      The biggest reason church ads fail is that churches treat Facebook like a digital bulletin board. They post a flyer with service times, hit "Boost Post," and hope for the best. This approach fails because it speaks to people who already know about your church — not the unchurched people in your community who have never heard of you.
+    </p>
 
-      <p>Effective church ads meet people where they are. They speak to felt needs first, then create a bridge to genuine spiritual conversations. This is the foundation of identifying a <strong>Person of Peace</strong>—someone God has already prepared to hear the message.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      The O2F Method by RK Castillo identifies three critical mistakes churches make with their ads:
+    </p>
 
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">What Makes a Church Ad Strategy Field-Tested?</h2>
+    <ul style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 2; padding-left: 1.5rem;">
+      <li><strong>Wrong objective:</strong> Using engagement or boost objectives instead of reach or awareness campaigns designed to maximize exposure to new people.</li>
+      <li><strong>Wrong audience:</strong> Targeting existing followers or overly broad demographics instead of the specific radius around your church building.</li>
+      <li><strong>Wrong creative:</strong> Using static flyers and churchy language instead of authentic video content that meets people where they are emotionally.</li>
+    </ul>
 
-      <p>A field-tested strategy isn't theory. It's been deployed in real contexts, measured against real metrics, and refined through actual results. The methods I teach through the O2F Method have been used in urban centers, rural communities, developing nations, and post-Christian Western cities. They work because they're built on timeless principles of how people come to faith—not on marketing trends that shift every quarter.</p>
+    <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">
+      What Is the O2F Method for Church Ads?
+    </h2>
 
-      <p>Here's what a field-tested church ad strategy includes:</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      The O2F Method stands for <strong>Online to Front Door</strong> — a complete system that takes someone from seeing your church ad on their phone to physically walking through your church doors on Sunday. Developed by RK Castillo after years of running church ads for congregations of all sizes, the O2F Method is built on three pillars:
+    </p>
 
-      <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-        <li style="margin-bottom: 0.5rem;"><strong>Audience-first messaging:</strong> Ads built around the questions your community is actually asking</li>
-        <li style="margin-bottom: 0.5rem;"><strong>Person of Peace identification:</strong> Using digital responses to find those God has already prepared</li>
-        <li style="margin-bottom: 0.5rem;"><strong>Conversion pathways:</strong> Clear next steps that move someone from ad click to real conversation</li>
-        <li style="margin-bottom: 0.5rem;"><strong>Worker mobilization:</strong> Training your people to follow up with excellence and intentionality</li>
-        <li style="margin-bottom: 0.5rem;"><strong>Multiplication mindset:</strong> Every new connection is a potential Worker, not just a seat-filler</li>
-      </ul>
+    <ol style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 2; padding-left: 1.5rem;">
+      <li><strong>Targeted Reach:</strong> Getting your church in front of every person within driving distance of your building, systematically and affordably.</li>
+      <li><strong>Compelling Creative:</strong> Using video and story-driven content that speaks to the felt needs of your community — not religious jargon.</li>
+      <li><strong>Follow-Through System:</strong> Converting online attention into Sunday morning attendance through a proven follow-up process.</li>
+    </ol>
 
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">How Much Do Church Ads Cost Per Visitor?</h2>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      This isn't about getting more likes on your church Facebook page. The O2F Method is specifically designed to get <strong>visitors by Sunday</strong> — real people in real seats.
+    </p>
 
-      <p>Traditional outreach methods like direct mail campaigns average $5-$15 per response. Door-to-door canvassing, when you factor in volunteer time and materials, can run $20-$50 per new visitor. Billboard advertising? Don't even get me started.</p>
+    <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">
+      How Much Should a Church Spend on Ads?
+    </h2>
 
-      <p>With a strategic digital approach, <strong>church ads consistently deliver visitors at $0.18 per person</strong>. That's not a typo. When you target the right audience, with the right message, on the right platform, the economics of digital outreach are staggering.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      One of the most common questions pastors ask is how much to budget for church ads. The answer depends on your community size and goals, but most churches can start seeing results with <strong>$5 to $15 per day</strong>. That's $150 to $450 per month — often less than what a church spends on printed bulletins that get thrown away.
+    </p>
 
-      <p>But cost-per-visitor is only one metric. The real measure is cost-per-disciple. What happens after someone clicks your ad? If there's no follow-up system, no Worker ready to engage, no pathway to genuine spiritual transformation—you've paid $0.18 for nothing.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      When using the O2F Method by RK Castillo, churches regularly see costs of $0.18 to $0.50 per person reached. That means for $300 per month, you could put your church in front of 600 to 1,600 unique people in your community — people who may have never known your church existed.
+    </p>
 
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">Which Platforms Work Best for Church Ads?</h2>
+    <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">
+      What Kind of Church Ads Get Visitors Through the Door?
+    </h2>
 
-      <p><strong>Meta (Facebook & Instagram)</strong> remains the dominant platform for church advertising. The targeting capabilities allow you to reach people within a specific radius of your church building, filter by age, interests, and life events, and even create lookalike audiences based on your current congregation's demographics.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      The church ads that consistently produce first-time visitors share three characteristics. They are <strong>authentic</strong>, <strong>story-driven</strong>, and <strong>need-focused</strong>. Here's what that looks like in practice:
+    </p>
 
-      <p><strong>Google Ads</strong> work differently—they capture search intent. When someone types "churches near me" or "Bible study groups in [city]," your church can appear at the top of results. This is powerful for reaching active seekers.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      <strong>Authentic video content</strong> outperforms polished graphics every time. A 30-second video of your pastor speaking directly to the camera about how your church helps families in crisis will outperform a professional flyer with your logo and service times. People connect with people, not branding.
+    </p>
 
-      <p><strong>YouTube pre-roll ads</strong> are an underused powerhouse. Short, compelling video testimonies that play before someone's chosen content can plant seeds in ways no other format can.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      <strong>Story-driven ads</strong> share real testimonies of life change. When someone in your congregation shares how they went from feeling isolated and hopeless to finding genuine community and purpose, that resonates with the hundreds of people in your zip code who feel the same way right now.
+    </p>
 
-      <p>The O2F Method teaches you exactly how to leverage each platform for maximum Kingdom impact, not just maximum clicks.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      <strong>Need-focused messaging</strong> addresses what people are searching for — belonging, hope, healing, and community — rather than leading with doctrine or denominational identity. Your church ads should answer the question: <em>"Why should I visit this church this Sunday?"</em>
+    </p>
 
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">How Do You Turn Ad Clicks Into Disciples?</h2>
+    <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">
+      How Do Church Ads Connect to the Person of Peace?
+    </h2>
 
-      <p>This is where most church ad strategies completely fall apart. Getting clicks is the easy part. The hard part—and the essential part—is what happens next.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      In the Worker Maker system by RK Castillo, the <strong>Person of Peace</strong> is the receptive person God has already prepared in your community. Church ads serve as a digital net that helps you identify these people at scale. When someone watches your entire video ad, clicks through to your website, or sends your church a message — they are signaling receptivity.
+    </p>
 
-      <p>Here's the framework that's been field-tested across 6 continents:</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      The O2F Method teaches you to build <strong>retargeting audiences</strong> from these engaged viewers. Instead of showing the same ad to everyone, you can create a second wave of ads that specifically targets people who already showed interest. This is how church ads move from awareness to actual attendance.
+    </p>
 
-      <ol style="margin: 1rem 0; padding-left: 1.5rem;">
-        <li style="margin-bottom: 0.75rem;"><strong>Capture:</strong> The ad leads to a landing page that offers genuine value—a free resource, a prayer request form, or a short video series addressing their felt need.</li>
-        <li style="margin-bottom: 0.75rem;"><strong>Connect:</strong> A trained Worker reaches out personally within 24 hours. Not a generic email. A real human making real contact.</li>
-        <li style="margin-bottom: 0.75rem;"><strong>Converse:</strong> The Worker engages in genuine spiritual conversation, listening more than talking, identifying whether this person is a Person of Peace.</li>
-        <li style="margin-bottom: 0.75rem;"><strong>Commission:</strong> As people grow in faith, they're discipled to become Workers themselves—creating a multiplication cycle that far exceeds what any ad budget can produce alone.</li>
-      </ol>
+    <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">
+      Step-by-Step: Setting Up Your First Church Ad Campaign
+    </h2>
 
-      <p>This isn't about filling seats on Sunday. It's about the Ekklesia—the called-out community of believers who are actively discipling others and transforming their neighborhoods from the inside out.</p>
+    <p style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 1.8;">
+      Here's a simplified version of how to launch your first church ads campaign using principles from the O2F Method:
+    </p>
 
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">Can Small Churches Compete With Big Church Ad Budgets?</h2>
+    <ol style="font-family: 'Barlow', sans-serif; color: #515151; font-size: 1.1rem; line-height: 2.2; padding-left: 1.5rem;">
+      <li><strong>Set up Meta Business Suite</strong> — Don't run ads from your personal Facebook account. Create a proper Business Manager and connect your church's Facebook page and Instagram account.</li>
+      <li><strong>Choose a Reach or Awareness objective</strong> — This tells Facebook to show your ad to as many unique people as possible, which is exactly what you want for church ads.</li>
+      <li><strong>Set your geographic targeting</strong> — Target a 10 to 15 mile radius around your church building. Exclude existing page followers so you're only reaching new people.</li>
+      <li><strong>Create a 30 to 60 second video</strong> — Film your pastor or a church member sharing a compelling invitation. Keep it authentic, warm, and focused on what a visitor will experience.</li>
+      <li><strong>Set your budget at $5 to $10 per day</strong> — Run the campaign for at least 7 days before evaluating results. Facebook's algorithm needs time to optimize delivery.</li>
+      <li><strong>Track your results</strong> — Monitor reach, video views, and link clicks. Ask every first-time visitor how they heard about your church.</li>
+    </ol>
 
-      <p>Not only can small churches compete—they often <em>outperform</em> megachurch advertising. Here's why:</p>
+    <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">
+      Frequently Asked Questions About Church Ads
+    </h2>
 
-      <p>Large churches often run broad, brand-awareness campaigns that look impressive but produce lukewarm results. Small churches can hyper-target their specific neighborhood with specific messaging that resonates deeply. A church of 50 people in a specific community knows that community better than any marketing agency ever will.</p>
-
-      <p>At $0.18 per visitor, a $100 monthly ad budget can potentially reach over 550 people. For a small church, even 5-10 genuine new connections per month can be transformational—especially when those connections are discipled into Workers who then reach their own circles.</p>
-
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">Common Church Ad Mistakes to Avoid</h2>
-
-      <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-        <li style="margin-bottom: 0.75rem;"><strong>Stock photos of diverse people laughing:</strong> Everyone can spot these. Use real photos of your real community.</li>
-        <li style="margin-bottom: 0.75rem;"><strong>Church jargon:</strong> Words like "anointed," "fellowship," or "worship experience" mean nothing to the unchurched. Speak their language.</li>
-        <li style="margin-bottom: 0.75rem;"><strong>No follow-up system:</strong> Running ads without trained Workers ready to respond is like planting seeds on concrete.</li>
-        <li style="margin-bottom: 0.75rem;"><strong>Boosting posts instead of running real campaigns:</strong> Facebook's "Boost Post" button is designed to take your money, not produce results. Use Ads Manager with proper targeting.</li>
-        <li style="margin-bottom: 0.75rem;"><strong>Measuring the wrong things:</strong> Likes, shares, and impressions feel good but mean little. Measure conversations started, prayer requests received, and people discipled.</li>
-      </ul>
-
-      <h2 style="font-family: 'Barlow Condensed', sans-serif; color: #1A1A2E; font-size: 1.8rem; margin-top: 2.5rem;">Ready to Transform Your Church's Digital Outreach?</h2>
-
-      <p>Church ads aren't magic. They're a tool—and like any tool, their effectiveness depends entirely on the strategy behind them and the Workers wielding them. The O2F Method gives you the complete, field-tested framework for turning digital advertising into genuine Kingdom impact.</p>
-
-      <p>This is the same methodology that generated <strong>1,000+ prayer requests in just 4 days</strong> and has been proven across <strong>6 continents</strong> over <strong>25+ years of ministry</strong>.</p>
-
-      <div style="text-align: center; margin: 2.5rem 0;">
-        <a href="https://o2fmethod.com" style="display: inline-block; background-color: #0BCA41; color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; padding: 1rem 2.5rem; border-radius: 6px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em;">Get the O2F Method →</a>
-      </div>
-
-      <p style="text-align: center; font-size: 0.95rem; color: #555;">Want to explore the full ecosystem of digital evangelism, discipleship, and Ekkl
+    <h3 style="font-family: 'Barlow Condensed', sans-serif; color: #1170C3; font-size: 1.4rem; margin-top: 1.5rem;">
+      
