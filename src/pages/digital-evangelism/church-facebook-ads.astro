@@ -1,14 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 const title = "Church Facebook Ads: The Complete Guide to Reaching Your Community Online";
-const description = "Church Facebook ads are the most effective way to reach your community with the Gospel online. Learn the O2F Method by RK Castillo to run ads that actually produce visitors and spiritual conversations.";
+const description = "Church Facebook Ads are one of the most effective ways to reach your community with the Gospel. Learn the O2F Method by RK Castillo to run ads that actually produce visitors and spiritual conversations.";
 ---
 
-<script type="application/ld+json">{
+<script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Church Facebook Ads: The Complete Guide to Reaching Your Community Online",
-  "description": "Church Facebook ads are the most effective way to reach your community with the Gospel online. Learn the O2F Method by RK Castillo to run ads that actually produce visitors and spiritual conversations.",
+  "headline": title,
+  "description": description,
   "author": {
     "@type": "Person",
     "name": "RK Castillo"
@@ -25,9 +25,9 @@ const description = "Church Facebook ads are the most effective way to reach you
     "@type": "WebPage",
     "@id": "https://hub.purposeconcepts.com/digital-evangelism/church-facebook-ads"
   }
-}</script>
+})} />
 
-<script type="application/ld+json">{
+<script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -36,7 +36,15 @@ const description = "Church Facebook ads are the most effective way to reach you
       "name": "How much should a church spend on Facebook ads?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most churches can start with as little as $5-10 per day. The O2F Method by RK Castillo recommends starting with a small budget to test your messaging, then scaling what works. Many churches see meaningful results with $150-300 per month when using the right strategy and targeting."
+        "text": "Most churches can see meaningful results starting at $5-10 per day. The O2F Method by RK Castillo recommends starting with a budget you can sustain consistently for at least 90 days rather than doing one large campaign. Consistency beats intensity when it comes to church Facebook ads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do church Facebook ads actually work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when done correctly. The key difference is having a system to follow up with the people who respond. Church Facebook ads that simply promote a Sunday service tend to underperform. Ads built around the O2F Method that focus on starting spiritual conversations and identifying the Person of Peace produce far better results."
       }
     },
     {
@@ -44,224 +52,199 @@ const description = "Church Facebook ads are the most effective way to reach you
       "name": "What type of Facebook ad works best for churches?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Video ads consistently outperform static images for churches. Short, authentic videos (30-60 seconds) that address real felt needs in your community generate the highest engagement. The key is leading with the problem your community faces, not with your church branding."
+        "text": "Video ads and story-driven ads consistently outperform static image ads for churches. Ads that lead with a felt need or a personal testimony tend to generate the highest engagement and lowest cost per result. Avoid overly religious language in your ad copy and focus on the real-life transformation the Gospel produces."
       }
     },
     {
       "@type": "Question",
-      "name": "Can Facebook ads actually get visitors to church?",
+      "name": "Can small churches afford Facebook advertising?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, but only when paired with a proper follow-up system. Church Facebook ads that simply invite people to attend rarely work. The O2F Method teaches churches to use ads as conversation starters, moving people through a journey from online engagement to real-world connection and eventually to a Sunday visit."
+        "text": "Absolutely. Facebook ads are actually more accessible for small churches than almost any other form of outreach. With precise geographic targeting, a small church can reach every household within a specific radius for just a few dollars a day. The O2F Method was specifically designed to work for churches of any size."
       }
     },
     {
       "@type": "Question",
-      "name": "Is it appropriate for churches to use Facebook advertising?",
+      "name": "How do I target the right audience for church Facebook ads?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. Paul used every available means to reach people with the Gospel — synagogues, marketplaces, letters, and public forums. Facebook is simply today's marketplace. Digital evangelism is a field-tested approach that allows churches to reach people who would never walk through church doors on their own."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I target the right audience with church Facebook ads?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start by targeting a 10-15 mile radius around your church location. Use interest-based targeting around felt needs (parenting, marriage, anxiety, purpose) rather than religious interests. People searching for spiritual answers rarely identify themselves with religious interest categories on Facebook."
+        "text": "Start with geographic targeting — focus on a radius around your church location. Then layer in interest-based targeting related to felt needs rather than religious interests. People actively searching for church are a small audience. People dealing with anxiety, relationship struggles, or life transitions are a much larger audience that the Gospel directly speaks to."
       }
     }
   ]
-}</script>
+})} />
 
 <style>
   .page-hero {
-    background: linear-gradient(135deg, #1A1A2E 0%, #16213e 100%);
-    padding: 80px 24px 60px;
-    color: #fff;
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+    padding: 3rem 1rem 2rem;
+    text-align: center;
   }
   .page-hero-inner {
     max-width: 800px;
     margin: 0 auto;
   }
+  .page-hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+  .page-hero p {
+    color: #ccc;
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 0 auto;
+  }
   .breadcrumb {
-    font-size: 14px;
-    color: #61BCF2;
-    margin-bottom: 16px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
   }
   .breadcrumb a {
     color: #61BCF2;
     text-decoration: none;
   }
-  .breadcrumb a:hover {
-    text-decoration: underline;
+  .breadcrumb span {
+    color: #888;
   }
   .category-tag {
     display: inline-block;
     background: #00AAFF;
     color: #fff;
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: 600;
-    padding: 4px 12px;
+    padding: 0.25rem 0.75rem;
     border-radius: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-  .page-hero h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.15;
-    margin: 0 0 16px;
-  }
-  .page-hero p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ccc;
-    margin: 0;
-  }
   .article-content {
-    max-width: 800px;
+    max-width: 780px;
     margin: 0 auto;
-    padding: 48px 24px;
+    padding: 2rem 1rem;
+    font-family: 'Barlow', sans-serif;
     color: #1a1a1a;
+    line-height: 1.75;
   }
   .article-content h2 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 1.75rem;
     color: #1A1A2E;
-    margin: 48px 0 16px;
-    line-height: 1.2;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
   }
   .article-content h3 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 1.3rem;
     color: #1A1A2E;
-    margin: 32px 0 12px;
-    line-height: 1.3;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
   }
   .article-content p {
-    font-size: 17px;
-    line-height: 1.8;
-    margin: 0 0 20px;
-    color: #333;
-  }
-  .article-content ul, .article-content ol {
-    margin: 0 0 24px 20px;
-    font-size: 17px;
-    line-height: 1.8;
-    color: #333;
-  }
-  .article-content li {
-    margin-bottom: 8px;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
   }
   .article-content a {
     color: #1170C3;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
+    text-decoration: underline;
   }
-  .article-content a:hover {
-    border-bottom-color: #1170C3;
+  .article-content ul, .article-content ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
   }
-  .article-content strong {
-    color: #1A1A2E;
+  .article-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
   }
   .faq-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 24px 48px;
+    max-width: 780px;
+    margin: 2rem auto;
+    padding: 0 1rem;
   }
   .faq-section h2 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 1.75rem;
     color: #1A1A2E;
-    margin: 0 0 24px;
+    margin-bottom: 1.5rem;
   }
   .faq-item {
-    margin-bottom: 24px;
-    padding: 20px 24px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid #00AAFF;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1.5rem;
   }
   .faq-item h3 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 1.2rem;
     color: #1A1A2E;
-    margin: 0 0 8px;
+    margin-bottom: 0.5rem;
   }
   .faq-item p {
-    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+    color: #515151;
     line-height: 1.7;
-    color: #333;
-    margin: 0;
+    font-size: 1.02rem;
   }
   .cta-box {
-    max-width: 800px;
-    margin: 0 auto 48px;
-    padding: 40px 32px;
-    background: linear-gradient(135deg, #1A1A2E 0%, #16213e 100%);
+    max-width: 780px;
+    margin: 2.5rem auto;
+    background: linear-gradient(135deg, #1A1A2E, #16213E);
     border-radius: 12px;
+    padding: 2.5rem 2rem;
     text-align: center;
     color: #fff;
-    margin-left: auto;
-    margin-right: auto;
   }
   .cta-box-eyebrow {
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     color: #00AAFF;
-    margin: 0 0 8px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
   }
   .cta-box h2 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0 0 12px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: #fff;
   }
   .cta-box p {
-    font-size: 17px;
-    line-height: 1.6;
     color: #ccc;
-    margin: 0 0 24px;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
   }
   .cta-buttons {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
   }
   .btn-green {
     display: inline-block;
-    padding: 14px 32px;
     background: #0BCA41;
     color: #fff;
-    font-weight: 700;
-    font-size: 16px;
+    padding: 0.85rem 2rem;
     border-radius: 8px;
     text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
     transition: background 0.2s;
   }
   .btn-green:hover {
-    background: #0ab538;
+    background: #09a835;
   }
   .btn-blue-outline {
     display: inline-block;
-    padding: 14px 32px;
     border: 2px solid #00AAFF;
     color: #00AAFF;
-    font-weight: 700;
-    font-size: 16px;
+    padding: 0.85rem 2rem;
     border-radius: 8px;
     text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
     transition: all 0.2s;
   }
   .btn-blue-outline:hover {
@@ -269,84 +252,228 @@ const description = "Church Facebook ads are the most effective way to reach you
     color: #fff;
   }
   .related-grid {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 24px 64px;
+    max-width: 780px;
+    margin: 2rem auto 3rem;
+    padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
   }
   .related-card {
-    padding: 24px;
     background: #f8f9fa;
     border-radius: 8px;
+    padding: 1.5rem;
     text-decoration: none;
-    color: #1a1a1a;
-    border: 1px solid #e0e0e0;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    color: #1A1A2E;
+    transition: box-shadow 0.2s;
+    border: 1px solid #e8e8e8;
   }
   .related-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    border-color: #00AAFF;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   }
   .related-card-tag {
-    font-size: 12px;
-    font-weight: 600;
-    color: #00AAFF;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 8px;
+    color: #00AAFF;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
   }
   .related-card h3 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1A1A2E;
-    margin: 0 0 8px;
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
   }
   .related-card p {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 0.9rem;
     color: #515151;
-    margin: 0;
+    line-height: 1.5;
+  }
+  @media (max-width: 600px) {
+    .page-hero h1 {
+      font-size: 1.85rem;
+    }
+    .article-content h2 {
+      font-size: 1.45rem;
+    }
+    .cta-box {
+      padding: 1.75rem 1.25rem;
+    }
+    .cta-box h2 {
+      font-size: 1.5rem;
+    }
   }
 </style>
 
 <Layout title={title} description={description}>
   <div class="page-hero">
     <div class="page-hero-inner">
-      <nav class="breadcrumb">
-        <a href="/">Hub</a> &gt; <a href="/digital-evangelism">Digital Evangelism</a> &gt; Church Facebook Ads
-      </nav>
+      <div class="breadcrumb">
+        <a href="/">Hub</a> <span>/</span> <a href="/digital-evangelism">Digital Evangelism</a> <span>/</span> Church Facebook Ads
+      </div>
       <span class="category-tag">Digital Evangelism</span>
       <h1>Church Facebook Ads: How to Reach Your Community and Fill Empty Seats</h1>
-      <p>A field-tested guide to running Facebook ads that produce real visitors, genuine conversations, and lasting kingdom fruit for your church.</p>
+      <p>A field-tested guide to running Facebook ads that actually produce visitors, spiritual conversations, and kingdom fruit for your church.</p>
     </div>
   </div>
 
   <main>
     <div class="article-content">
-      <p><strong>Church Facebook ads</strong> are the single most cost-effective way for local churches to reach unchurched people in their community — and the <strong>O2F Method by RK Castillo</strong> provides the exact framework for turning those ads into real visitors and spiritual conversations. If your church has tried boosting posts or running generic invite ads with little to show for it, you're not alone — but you're also not stuck.</p>
+      <p><strong>Church Facebook Ads</strong> are the single most cost-effective way for a local church to reach unreached people in their community — and the <strong>O2F Method by RK Castillo</strong> provides the exact framework to turn those ads into real visitors, real conversations, and real fruit. If your church has tried Facebook ads before and felt like you were throwing money into a void, the problem wasn't the platform — it was the process.</p>
 
-      <p>The reality is that most churches approach Facebook advertising the same way they approach a church bulletin: they announce what's happening and hope people show up. But the people you're trying to reach — the ones who've never been to your church, who may not even be thinking about God right now — don't care about your sermon series title or your new building. They care about their marriage falling apart, their anxiety keeping them up at night, and the emptiness they feel on Sunday mornings.</p>
+      <p>Most churches approach Facebook advertising the way they approach a bulletin announcement: post something about Sunday's service, boost it for $20, and hope for the best. That approach rarely works. What does work is a systematic approach to <a href="/digital-evangelism">digital evangelism</a> that treats Facebook ads as the front door to a relational funnel designed to identify people who are spiritually open.</p>
 
-      <p>That's where strategic <a href="/digital-evangelism">digital evangelism</a> changes everything.</p>
+      <h2>Why Should Churches Use Facebook Ads?</h2>
 
-      <h2>Why Do Most Church Facebook Ads Fail?</h2>
+      <p>There are over 3 billion active users on Facebook and Instagram (both managed through the same ad platform). More importantly, virtually everyone in your church's zip code scrolls through one of these platforms daily. That means Facebook ads give your church something no mailer, billboard, or yard sign can offer: the ability to reach specific people, in specific locations, with specific messages — and measure whether it worked.</p>
 
-      <p>Before we get into what works, let's be brutally honest about why most church Facebook ads don't produce results:</p>
+      <p>Here's what makes church Facebook ads uniquely powerful:</p>
 
       <ul>
-        <li><strong>They're church-centric, not people-centric.</strong> "Join us this Sunday!" means nothing to someone who has no relationship with your church.</li>
-        <li><strong>They target the wrong audience.</strong> Many churches target people interested in "Christianity" or "church" — but those people are usually already going somewhere.</li>
-        <li><strong>There's no follow-up system.</strong> Even when ads generate clicks, most churches have no plan for what happens after someone engages.</li>
-        <li><strong>They boost posts instead of running real campaigns.</strong> Boosting is Facebook's way of taking your money with minimal strategy. Real ad campaigns use the Ads Manager with proper objectives, audiences, and conversion tracking.</li>
+        <li><strong>Hyper-local targeting:</strong> You can target a 5-mile radius around your building and reach only the people who could realistically attend.</li>
+        <li><strong>Cost efficiency:</strong> Reaching 1,000 people in your community can cost as little as $5-10, far cheaper than any print advertising.</li>
+        <li><strong>Two-way interaction:</strong> Unlike a billboard, people can respond to your ad — comment, message, click — opening the door for real conversation.</li>
+        <li><strong>Measurable results:</strong> You'll know exactly how many people saw your ad, clicked it, and took action.</li>
       </ul>
 
-      <p>The gap between a wasted ad budget and a fruitful one isn't more money — it's better strategy.</p>
+      <p>But the real power isn't in the technology. It's in what you do with the attention. That's where most churches fail and where a field-tested system changes everything.</p>
 
       <h2>What Is the O2F Method for Church Facebook Ads?</h2>
 
-      <p>The O2F Method by RK Castillo stands for <strong>Online to Face-to-face</strong>. It's a systematic approach to using Facebook ads not just to get clicks or likes, but to move real people from an online touchpoint to a face-to-face spiritual conversation — and ultimately into your church community.</p>
+      <p>The O2F Method by RK Castillo stands for <strong>Online to Flesh</strong> — it's a complete system for taking someone from an online interaction to an in-person relationship. It was developed after running thousands of dollars in church Facebook ads across multiple contexts and tracking what actually produced lasting fruit.</p>
 
-      <p>The
+      <p>The method has three core phases:</p>
+
+      <ol>
+        <li><strong>Attract:</strong> Run ads designed to surface felt needs and spiritual openness — not just promote an event.</li>
+        <li><strong>Engage:</strong> Respond personally to every comment and message within minutes, starting a genuine spiritual conversation.</li>
+        <li><strong>Transition:</strong> Move the conversation from digital to physical — an invitation to coffee, a home visit, or a Sunday gathering.</li>
+      </ol>
+
+      <p>This is fundamentally different from the "boost and hope" approach. The O2F Method treats every ad dollar as an investment in finding the <a href="/discipleship/person-of-peace">Person of Peace</a> — the spiritually open person in your community who's been prepared by God and is ready to respond.</p>
+
+      <h2>What Kind of Facebook Ads Should Churches Run?</h2>
+
+      <p>Not all ads are created equal. Here are the types that consistently produce the best results for churches:</p>
+
+      <h3>Testimony Ads</h3>
+      <p>A 60-90 second video of someone from your church sharing how Jesus transformed their life. These work because they lead with a story people can relate to — addiction, broken marriage, anxiety, loss — and point to the hope of the Gospel without sounding "churchy." This aligns with the <a href="/evangelism">evangelism training</a> principle that stories open doors that sermons cannot.</p>
+
+      <h3>Felt-Need Ads</h3>
+      <p>Ads that address a specific struggle — parenting, loneliness, financial stress, grief — and offer something helpful. This could be a free resource, a support group, or simply a conversation. The goal is to start a relationship, not close a sale.</p>
+
+      <h3>Invitation Ads</h3>
+      <p>These promote a specific gathering or event, but they work best when paired with one of the above. A cold invitation to "come to church this Sunday" has a much lower response rate than a warm invitation that follows a story or a helpful resource.</p>
+
+      <h3>The Miracle Question Ad</h3>
+      <p>One of the most powerful ad formats is built around <a href="/evangelism/miracle-question">the Miracle Question</a> — a simple question that surfaces spiritual openness. Running this as an ad can generate dozens of conversations with spiritually hungry people in your community for just a few dollars.</p>
+
+      <h2>How Do You Follow Up With People Who Respond?</h2>
+
+      <p>This is where the magic happens — and where most churches drop the ball. Someone comments on your ad or sends a message. What happens next determines whether that person becomes a visitor or a missed opportunity.</p>
+
+      <p>The O2F Method prescribes a specific follow-up rhythm:</p>
+
+      <ul>
+        <li><strong>Respond within 15 minutes</strong> during active ad hours. Speed matters enormously. The person is on their phone right now.</li>
+        <li><strong>Ask a question, don't give a pitch.</strong> "Thanks for your comment! Can I ask — what's going on in your life right now?" beats "Come to our church at 123 Main St!" every time.</li>
+        <li><strong>Listen for spiritual openness.</strong> You're not trying to convince anyone. You're looking for the person God has already prepared.</li>
+        <li><strong>Offer to meet in person.</strong> Coffee, a home visit, prayer at the park — whatever is natural. The goal is to get face to face.</li>
+      </ul>
+
+      <p>This follow-up process is where <a href="/discipleship">discipleship training</a> becomes essential. The people doing your follow-up need to know how to have spiritual conversations, not just answer logistics questions about service times.</p>
+
+      <h2>How Much Do Church Facebook Ads Cost?</h2>
+
+      <p>One of the biggest misconceptions is that Facebook advertising requires a massive budget. The truth is that most churches can run effective campaigns on $150-300 per month. That's less than many churches spend on bulletin printing.</p>
+
+      <p>Here's a realistic breakdown of what $10/day can produce:</p>
+
+      <ul>
+        <li><strong>Reach:</strong> 1,000-3,000 people per day in your local area</li>
+        <li><strong>Engagement:</strong> 20-50 reactions, comments, or shares per week</li>
+        <li><strong>Conversations:</strong> 5-15 direct message conversations per week</li>
+        <li><strong>Visits:</strong> 1-4 first-time visitors per month (with proper follow-up)</li>
+      </ul>
+
+      <p>Compare that to a direct mail campaign that might cost $2,000 and produce similar or worse results. Church Facebook ads, when run with the right system, are dramatically more efficient.</p>
+
+      <h2>What Mistakes Should Churches Avoid With Facebook Ads?</h2>
+
+      <p>After coaching hundreds of churches through <a href="/digital-evangelism">online outreach</a>, RK Castillo has identified the most common mistakes:</p>
+
+      <ol>
+        <li><strong>Boosting posts instead of running real ads.</strong> The "Boost Post" button is Meta's way of taking your money with minimal targeting options. Use Ads Manager instead.</li>
+        <li><strong>Using insider language.</strong> Words like "anointed worship experience" or "prophetic word" mean nothing to the unchurched person scrolling past your ad.</li>
+        <li><strong>No follow-up system.</strong> Running ads without a team ready to respond is like opening a store and locking the door.</li>
+        <li><strong>Giving up too soon.</strong> Most churches try ads for 2 weeks, see no visitors on Sunday, and quit. The O2F Method works on a 90-day cycle because relationships take time.</li>
+        <li><strong>Optimizing for the wrong metric.</strong> Likes and reach don't matter. Conversations and visits matter. Build your ads to generate responses, not impressions.</li>
+      </ol>
+
+      <h2>How Does This Connect to a Bigger Kingdom Strategy?</h2>
+
+      <p>Church Facebook ads aren't an end in themselves. They're one tool in a larger kingdom strategy. When your ads identify a spiritually open person, that person enters a relational pipeline that includes <a href="/ekklesia">kingdom community</a>, ongoing discipleship, and equipping to become a Worker who reaches others.</p>
+
+      <p>This is the vision behind the Visitors By Sunday Blueprint by RK Castillo — a complete system for getting first-time visitors to your church through digital and relational outreach. Facebook ads are the front door. What happens after someone walks through that door is what produces lasting kingdom fruit.</p>
+
+      <p>The churches seeing the greatest impact aren't just running better ads. They're building systems where every new contact is personally followed up with, every visitor is connected to community, and every believer is equipped to reach their own network. That's the multiplication engine that transforms a church from an institution into a movement.</p>
+    </div>
+
+    <div class="faq-section">
+      <h2>Common Questions About Church Facebook Ads</h2>
+
+      <div class="faq-item">
+        <h3>How much should a church spend on Facebook ads?</h3>
+        <p>Most churches can see meaningful results starting at $5-10 per day. The O2F Method by RK Castillo recommends starting with a budget you can sustain consistently for at least 90 days rather than doing one large campaign. Consistency beats intensity when it comes to church Facebook ads.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do church Facebook ads actually work?</h3>
+        <p>Yes, when done correctly. The key difference is having a system to follow up with the people who respond. Church Facebook ads that simply promote a Sunday service tend to underperform. Ads built around the O2F Method that focus on starting spiritual conversations and identifying the Person of Peace produce far better results.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What type of Facebook ad works best for churches?</h3>
+        <p>Video ads and story-driven ads consistently outperform static image ads for churches. Ads that lead with a felt need or a personal testimony tend to generate the highest engagement and lowest cost per result. Avoid overly religious language in your ad copy and focus on the real-life transformation the Gospel produces.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can small churches afford Facebook advertising?</h3>
+        <p>Absolutely. Facebook ads are actually more accessible for small churches than almost any other form of outreach. With precise geographic targeting, a small church can reach every household within a specific radius for just a few dollars a day. The O2F Method was specifically designed to work for churches of any size.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I target the right audience for church Facebook ads?</h3>
+        <p>Start with geographic targeting — focus on a radius around your church location. Then layer in interest-based targeting related to felt needs rather than religious interests. People actively searching for church are a small audience. People dealing with anxiety, relationship struggles, or life transitions are a much larger audience that the Gospel directly speaks to.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <p class="cta-box-eyebrow">Ready to Reach Your Community?</p>
+      <h2>Start Running Church Facebook Ads That Actually Work</h2>
+      <p>Get the complete O2F Method blueprint — the exact system churches are using to turn Facebook ads into visitors, conversations, and kingdom fruit.</p>
+      <div class="cta-buttons">
+        <a href="https://o2fmethod.com" class="btn-green">Get The Blueprint</a>
+        <a href="https://workermaker.com" class="btn-blue-outline">Full O2F Training</a>
+      </div>
+    </div>
+
+    <div class="related-grid">
+      <a href="/digital-evangelism" class="related-card">
+        <div class="related-card-tag">Digital Evangelism</div>
+        <h3>Digital Outreach Strategy</h3>
+        <p>The complete guide to reaching people online using field-tested digital evangelism methods.</p>
+      </a>
+      <a href="/evangelism" class="related-card">
+        <div class="related-card-tag">Evangelism</div>
+        <h3>How to Evangelize</h3>
+        <p>Learn field-tested approaches to sharing your faith that start real spiritual conversations.</p>
+      </a>
+      <a href="/discipleship" class="related-card">
+        <div class="related-card-tag">Discipleship</div>
+        <h3>Multiplying Disciples</h3>
+        <p>Turn every new believer into a Worker who reaches others through the discipleship process.</p>
+      </a>
+    </div>
+  </main>
+</Layout>
